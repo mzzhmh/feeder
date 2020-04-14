@@ -1,0 +1,41 @@
+This is an AI optimization tool for building the GEO-MAP and finding the distance between any two nodes for the Engergy Grid network.
+Developed for one of the energy tranmission companies in Australia (customer's data is not uploaded)
+
+input file:feeder.csv which is the map information which has the two adjacent pionts names and their distance.
+e.g.,
+Node 1,Node 2,l [km]
+1,2,10
+3,2,100
+4,2,15
+4,5,17
+6,4,22
+4,7,103
+7,8,44
+7,9,67
+9,10,10
+13,10,100
+10,11,10
+11,12,102
+14,11,200
+15,14,401
+15,16,106
+16,17,211
+18,16,76
+18,19,35
+19,20,53
+
+
+Output: 
+1. The topoloy of the map base on the input
+2. The path from start node (1 in above example) to each of the nodes (2,3,4,5,.....20)
+3. The length from the start (1 in above example) to each of the nodes (2,3,4,5,.....20)
+
+
+1. put your data file (feeder.csv) into the same directory as codes;
+2. Run "./feeder.py feeder.csv path" which will generate 'solution' file in the same directory, which is the the path from start node (1 in above example) to each of the nodes (2,3,4,5,.....20);
+3. Run "./feeder.py feeder.csv node" which will generate 'connectNode' file in the same directory, which is the topoloy of the map base on the input;
+4. Run "./calcLen.py feeder.csv sum" which will generate 'solutionLenSum' file in the same directory, which is the length from the start (1 in above example) to each of the nodes (2,3,4,5,.....20);
+5. Run "./calcLen.py feeder.csv path" which will generate 'solutionLen' file in the same directory, which give each section's length in the path from the start to each of the nodes.
+
+
+
